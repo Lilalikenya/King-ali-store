@@ -1,0 +1,17 @@
+/* King Ali Store */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#fff}
+header{position:sticky;top:0;z-index:100;background:#000}
+nav a{transition:.3s}
+nav a:hover{color:#d4af37}
+.hero{background:linear-gradient(135deg,#111,#222);padding:90px 8%}
+.btn{background:#d4af37;color:#111;border-radius:6px;padding:12px 24px;display:inline-block;font-weight:bold}
+.btn:hover{background:#f0c85a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:10px;padding:20px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#d4af37;box-shadow:0 8px 24px rgba(212,175,55,.25)}
+footer{color:#bbb}
+@media(max-width:768px){
+header{flex-direction:column}
+.hero h1{font-size:36px}
+}
