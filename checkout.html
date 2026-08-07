@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Checkout - M-Pesa Ready</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0}header{background:#0a7c3b;color:#fff;padding:18px;text-align:center}
+.container{max-width:900px;margin:30px auto;background:#fff;padding:24px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.full{grid-column:1/-1}
+input,select,textarea{width:100%;padding:10px;margin-top:6px}
+button{background:#0a7c3b;color:#fff;border:0;padding:12px 20px;border-radius:6px;cursor:pointer}
+.summary{background:#fafafa;padding:16px;border:1px solid #ddd;border-radius:8px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>King Ali Store - Secure Checkout</h1></header>
+<div class='container'>
+<div class='grid'>
+<div>
+<h2>Customer Details</h2>
+<label>Full Name<input></label>
+<label>Email<input type='email'></label>
+<label>M-Pesa Phone<input placeholder='07XXXXXXXX'></label>
+<label>Address<textarea></textarea></label>
+<label>Delivery<select><option>Home Delivery</option><option>Pickup</option></select></label>
+</div>
+<div class='summary'>
+<h2>Order Summary</h2>
+<p>Subtotal: KSh 5,000</p>
+<p>Shipping: KSh 300</p>
+<hr><h3>Total: KSh 5,300</h3>
+<h3>Payment Method</h3>
+<label><input type='radio' checked> M-Pesa</label><br>
+<label><input type='radio'> Visa/Mastercard</label><br>
+<label><input type='radio'> PayPal</label>
+<p style='color:#666'>M-Pesa-ready: connect this button to your backend using Safaricom Daraja STK Push API.</p>
+<button onclick="alert('Demo only. Connect to your backend for real M-Pesa payments.')">Pay with M‑Pesa</button>
+</div>
+<div class='full'><small>© King Ali Store</small></div>
+</div></div></body></html>
