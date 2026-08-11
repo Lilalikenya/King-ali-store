@@ -5,8 +5,16 @@
 
   const STORAGE_KEY = "kingAliStoreProducts";
 
+  // Get products from BOTH sources: hardcoded + localStorage
   function getProducts() {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    // Start with hardcoded products from products.js
+    let allProducts = Array.isArray(KING_ALI_PRODUCTS) ? [...KING_ALI_PRODUCTS] : [];
+    
+    // Add products from localStorage (user-added products)
+    const savedProducts = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    allProducts = allProducts.concat(savedProducts);
+    
+    return allProducts;
   }
 
   function saveProducts(products) {
@@ -76,11 +84,10 @@
           image: image
         };
 
-        const products = getProducts();
-
-        products.push(product);
-
-        saveProducts(products);
+        // Only save to localStorage (not hardcoded products)
+        const savedProducts = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        savedProducts.push(product);
+        saveProducts(savedProducts);
 
         alert("Product saved successfully! 🛒👑");
 
